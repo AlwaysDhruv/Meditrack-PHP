@@ -1,0 +1,276 @@
+/* ==========================================
+   GLOBAL THEME
+========================================== */
+:root {
+  --primary: #d6fff3;
+  --primary-dark: #00392f;
+  --bg-gradient: linear-gradient(135deg, #0f473e, #012821);
+  --white: #ffffff;
+
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.15);
+  --glass-card: rgba(255, 255, 255, 0.10);
+
+  --font: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg-gradient);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  margin-left: 25px;
+  font-size: 17px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.nav a:hover {
+  color: var(--white);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+/* ==========================================
+   HOME PAGE
+========================================== */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin-top: 90px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 720px;
+  margin: auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 14px 36px;
+  margin: 0 12px;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--primary-dark);
+}
+
+.primary:hover {
+  background: white;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--primary);
+}
+
+.secondary:hover {
+  background: var(--primary);
+  color: var(--primary-dark);
+}
+
+/* ==========================================
+   FEATURES SECTION
+========================================== */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 110px;
+  padding: 0 20px;
+}
+
+.feature-card {
+  width: 300px;
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--glass-card);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.45);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 22px;
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+/* ==========================================
+   AUTH PAGES (LOGIN + REGISTER + OTP + RESET)
+========================================== */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-box {
+  width: 360px;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 40px 32px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+  animation: fadeIn 0.6s ease;
+}
+
+.auth-box h2 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 28px;
+}
+
+/* INPUTS */
+.auth-box input,
+.auth-box select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: white;
+  background: var(--glass-strong);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.auth-box input::placeholder {
+  color: rgba(220,255,245,0.75);
+}
+
+.auth-box input:focus,
+.auth-box select:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(214,255,243,0.55);
+  box-shadow: 0 0 12px rgba(214,255,243,0.45);
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  height: 44px;
+  background: var(--primary);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.auth-box button:hover {
+  background: white;
+  box-shadow: 0 4px 18px rgba(214,255,243,0.55);
+}
+
+/* EXTRA LINKS */
+.auth-extra {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.auth-extra a {
+  color: #baffef;
+  text-decoration: underline;
+  transition: 0.25s ease;
+}
+
+.auth-extra a:hover {
+  color: white;
+}
+
+/* ERROR MESSAGE */
+.error {
+  background: rgba(255, 70, 70, 0.20);
+  border-left: 4px solid #ff5b5b;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #ffecec;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}

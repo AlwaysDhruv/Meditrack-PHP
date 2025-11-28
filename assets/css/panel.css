@@ -1,0 +1,143 @@
+/* PANEL STRUCTURE */
+.patient-panel {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: white;
+  font-family: var(--font);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.side-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+.side-link {
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.10);
+  text-decoration: none;
+  color: var(--primary);
+  transition: 0.25s ease;
+  display: block;
+}
+
+.side-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.side-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 20px 0;
+}
+
+.green {
+  background: rgba(0, 255, 150, 0.20);
+}
+
+.green:hover {
+  background: rgba(0, 255, 150, 0.35);
+}
+
+.blue {
+  background: rgba(80, 150, 255, 0.20);
+}
+
+.blue:hover {
+  background: rgba(80, 150, 255, 0.35);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.logout-btn {
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: rgba(255, 70, 70, 0.20);
+  color: #ffbcbc;
+  text-decoration: none;
+  display: block;
+  transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 70, 70, 0.35);
+  color: white;
+}
+
+/* MAIN CONTENT */
+.patient-content {
+  flex: 1;
+  padding: 45px;
+}
+
+/* GRID CARD LAYOUT */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.modal-overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-box {
+    background:#ffffff15;
+    backdrop-filter:blur(12px);
+    padding:20px;
+    width:600px;
+    border-radius:12px;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+.ai-output {
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:8px;
+    max-height:300px;
+    overflow-y:auto;
+}
